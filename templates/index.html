@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <script type = "text/javascript"
+         src = "{{ url_for('static', filename = 'main.js')}}" ></script> -->
+         <!-- <script type="text/javascript">
+         	document.getElementById("colour").innerHTML="newtext";
+         </script> -->
+	<style type="text/css">
+		/* .rating-star {
+    color: white;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+} */
+#parent_div_1, #parent_div_2, #parent_div_3{
+    width:47vw;
+    height:100vw;
+    /* border:1px solid red; */
+    margin-right:10px;
+    float:left;
+}
+.child_div_1{
+    float:left;
+    margin-right:5px;
+}
+	</style>
+	<title>WEB APP</title>
+
+</head>
+<body>
+	<div style="background-color:black;width: 100%;height: 5vw;">
+		<br><br><br>
+		<form method="POST" action="{{url_for('sign')}}">
+		<button style="float:right">SIGNUP</button>
+	</form>
+	<form method="POST" action="{{url_for('sign')}}">
+		<button style="float:right">SIGNIN</button>
+	</form>
+		<!-- <i><center><span style="color: red;font-size: 3.5vw">KNOW & CURE your disease here</span></center></i>
+		<i><center><span style="color: orange;font-size: 2vw">- beacause we care</span></center></i> -->
+	</div>
+	<div style="background-color:black;width: 100%;height: 5vw;">
+		<br><br><br>
+		<form method="POST" action="{{url_for('move_forward')}}">
+
+		 <button>CONSULT A DOCTER</button>
+		</form>
+
+		<!-- <button type="button" name="button">SIGNIN</button> -->
+		<!-- <i><center><span style="color: red;font-size: 3.5vw">KNOW & CURE your disease here</span></center></i>
+		<i><center><span style="color: orange;font-size: 2vw">- beacause we care</span></center></i> -->
+	</div>
+	<div style="background-color:black;width: 100%;height: 15vw;">
+		<br><br><br>
+		<i><center><span style="color: red;font-size: 3.5vw">KNOW & CURE your disease here</span></center></i>
+		<i><center><span style="color: orange;font-size: 2vw">- beacause we care</span></center></i>
+	</div>
+	<!-- <div style="background-color:black;width: 100%;height: 5vw;">
+
+	</div> -->
+<div style="background-color: black;width:98vw;height:100vw;">
+
+
+<div id='parent_div_1' style="color:red;display: block;background-color: black;">
+	<center>
+<form method="POST" action="{{url_for('different_platform')}}">
+
+ <input style="height: 50%" type="text" name="symptom" placeholder="Enter your symptom here eg.. cough" required>
+ <input style="height: 50%" type="hidden" name="medicine" value="akhil">
+			 <button>Submit</button>
+</form>
+</center>
+	<center>
+		<br>
+	{{msg|safe}}
+	 <!-- {{ "%s %s %s"|format(key4,breaker,val4) }} -->
+	 <br>
+	 {{msg1|safe}}
+	 {{msg2|safe}}
+	 {{msg3|safe}}
+	 <br>
+	 <!-- {{unf}}
+	{{ "%s %s %s"|format(key4,breaker,val4) }}
+	 <br>
+	 {{ "%s %s %s"|format(key2,breaker,val2) }}
+	<br>
+	<span id="colour">
+	{{ "%s %s %s"|format(key1,breaker,val1) }}
+	</span>
+	<br>
+
+	<span class="colour">
+	{{ "%s %s %s"|format(key3,breaker,val3) }}
+	</span>
+
+	<br>
+	{{ "%s %s %s"|format(key5,breaker,val5) }} -->
+	</center>
+
+	<!-- DO YOU WANT KNOW MORE ABOUT YOUR DISEASE:
+	<button type="button" name="YES">YES</button>
+	<button type="button" name="NO">NO</button> -->
+<!-- <div class ='child_div_1'>asd</div>
+<div class ='child_div_2'>asd</div> -->
+</div>
+
+<div id='parent_div_2' style="color:red;display: block;background-color: black;">
+	<center>
+<form method="POST" action="{{url_for('different_platform')}}">
+
+ <input style="height: 50%" type="text" name="medicine" placeholder="Enter your Medicine name here eg.. Paracetamol" value="paracetamol" required>
+ <input style="height: 50%" type="hidden" name="symptom" value="akhil">
+			 <button>Submit</button>
+</form>
+</center>
+	<center>
+		<br>
+	 {{msg4|safe}}
+
+	 {{msg5|safe}}
+	 <!-- {{msg2|safe}}
+	 {{msg3|safe}}  -->
+	 <br>
+	 <!-- {{unf}}
+	{{ "%s %s %s"|format(key4,breaker,val4) }}
+	 <br>
+	 {{ "%s %s %s"|format(key2,breaker,val2) }}
+	<br>
+	<span id="colour">
+	{{ "%s %s %s"|format(key1,breaker,val1) }}
+	</span>
+	<br>
+
+	<span class="colour">
+	{{ "%s %s %s"|format(key3,breaker,val3) }}
+	</span>
+
+	<br>
+	{{ "%s %s %s"|format(key5,breaker,val5) }} -->
+	</center>
+
+	<!-- DO YOU WANT KNOW MORE ABOUT sideeffect:
+	<button type="button" name="YES">YES</button>
+	<button type="button" name="NO">NO</button> -->
+<!-- <div class ='child_div_1'>asd</div>
+<div class ='child_div_2'>asd</div> -->
+</div>
+</div>
+<!-- <div id='parent_div_3'>
+<div class ='child_div_1'>asd</div>
+<div class ='child_div_2'>asd</div> -->
+</body>
+</html>

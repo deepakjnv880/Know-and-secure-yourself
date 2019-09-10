@@ -1,0 +1,75 @@
+<!doctype html>
+<head>
+  <style media="screen">
+    body {background-color: black;}
+    h1 {color:red;}
+    h5 {color:red;}
+    input{background-color:white;}
+    label {color:white}
+    /* form {alignment:center;} */
+    #signin{
+      float:top;
+      float:right;
+      /* display: inline-block; */
+       /* background-color:red; */
+    }
+    #signup{
+      display: inline-block;
+    }
+  </style>
+</head>
+<title>Signup/Signin</title>
+
+<center>
+  <i>
+<h1>INDIAN INSTITUTE OF TECHONOLOGY, MANDI</h1>
+<h5>-Here you can find everything</h5>
+<!-- <h1>POWER HELPER</h1> -->
+  </i>
+<!-- <h4>-made for helping</h4> -->
+</center>
+
+<body>
+  <!-- <center> -->
+  <div id="signup">
+
+
+  <form action="{{url_for('signup')}}" method="POST">
+    <label for="">registration_number</label>
+    <br>
+    <input type="text" name="registration_number" value="" required>
+    <br>
+     <label for="">name</label>
+     <br>
+     <input type="text" name="name" value="" required>
+     <br>
+     <label for="">Email</label>
+     <br>
+     <input type="text" name="email" value="" required>
+     <br>
+     <label for="">Password</label>
+     <br>
+     <input type="password" name="password1" value="" required>
+     <br>
+     <label for="">confirm password</label>
+     <br>
+     <input type="password" name="password2" value="" required>
+     <br>
+     <button type="submit" name="Signup">Signup</button>
+  </form>
+  </div>
+  <!-- </center> -->
+  <div id="signin">
+    <form action="{{url_for('signin')}}" method="POST">
+       <label for="">registration_number</label>
+       <br>
+       <input type="text" name="registration_number" value="" required>
+       <br>
+       <label for="">Password</label>
+       <br>
+       <input type="password" name="password" value="" required>
+       <br>
+       <button type="submit" name="Signup">Signin</button>
+    </form>
+  </div>
+</body>
